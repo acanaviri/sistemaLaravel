@@ -24,7 +24,7 @@ class CategoriaController extends Controller
             $categorias = Categoria::orderBy('id', 'desc')->paginate(3);
         }      
         else{
-            $categorias = Categoria::where($criterio,'like', '%'.$buscar.'%')->orderBy('id', 'desc')->paginate(3);
+            $categorias = Categoria::where($criterio,'like','%'.$buscar.'%')->orderBy('id', 'desc')->paginate(3);
         }
         return [
             'pagination' => [

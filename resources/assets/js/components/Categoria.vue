@@ -40,7 +40,7 @@
                             <tbody>
                                 <tr v-for="categoria in arrayCategoria" :key="categoria.id">
                                     <td>
-                                        <button type="button" @click="abrirModal('categoria','actualizar',categoria)"class="btn btn-warning btn-sm">
+                                        <button type="button" @click="abrirModal('categoria','actualizar',categoria)" class="btn btn-warning btn-sm">
                                           <i class="icon-pencil"></i>
                                         </button> &nbsp;
                                         <template v-if="categoria.condicion">
@@ -189,7 +189,7 @@
         methods:{
             listarCategoria(page, buscar, criterio){
                 let me=this;
-                var url = '/categoria?page=' + page + '&buscar='+ buscar+'&criterio'+criterio;
+                var url = '/categoria?page=' + page + '&buscar='+ buscar+'&criterio='+criterio;
                 axios.get(url).then(function (response){
                     var respuesta = response.data;
                     me.arrayCategoria = respuesta.categorias.data;

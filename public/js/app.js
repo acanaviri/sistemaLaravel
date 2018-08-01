@@ -47909,7 +47909,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         listarCategoria: function listarCategoria(page, buscar, criterio) {
             var me = this;
-            var url = '/categoria?page=' + page + '&buscar=' + buscar + '&criterio' + criterio;
+            var url = '/categoria?page=' + page + '&buscar=' + buscar + '&criterio=' + criterio;
             axios.get(url).then(function (response) {
                 var respuesta = response.data;
                 me.arrayCategoria = respuesta.categorias.data;
